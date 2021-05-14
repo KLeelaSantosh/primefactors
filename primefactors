@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+void primeFactors(int p)
+{
+// Print the number of 2s that divide n
+while (p % 2 == 0)
+{
+cout << 2 << " ";
+p = p/2;
+}
+for (int i = 3; i <= sqrt(p); i = i + 2)
+{
+while (p % i == 0)
+{
+cout << i << " ";
+p = p/i;
+}
+}
+if (p > 2)
+cout << p << " ";
+}
+int main()
+{
+int p = 315;
+primeFactors(p);
+return 0;
+}
